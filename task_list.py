@@ -45,17 +45,15 @@ print(longer_tasks)
 print()
 
 
+# Print any task with a given description
+task_to_search_for = input("Searching for a task: ")
+found_task = False
+for task in tasks:
+    if task["description"].lower() == task_to_search_for.lower():
+        found_task = True
+if found_task == True:
+    print(task)
+else:
+    print("Task not found")
 
 
-        # print("Searching for a book by title...")
-        # search_title = input("Enter title: ")
-        # found_book = None
-        # for book in library["books"]:
-        #     if book["title"].lower() == search_title.lower():
-        #         found_book = book
-        # if found_book != None:
-        #     title = found_book["title"]
-        #     author = found_book["author"]
-        #     print(f"Found {title} by {author}")
-        # else:
-        #     print(f"{search_title} not found")
