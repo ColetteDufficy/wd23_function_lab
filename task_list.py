@@ -10,80 +10,80 @@ tasks = [
 ]
 
 
-# # Print a list of uncompleted tasks
-# print("A list of uncompleted tasks:")
-# uncompleted_tasks = []
-# for task in tasks:
-#     if task["completed"] == False:
-#         uncompleted_tasks.append(task["description"])
+# Print a list of uncompleted tasks
+print("A list of uncompleted tasks:")
+uncompleted_tasks = []
+for task in tasks:
+    if task["completed"] == False:
+        uncompleted_tasks.append(task["description"])
 
-# for task in uncompleted_tasks:
-#     print(f"{task}")
-# print()
-
-
-# # Print a list of completed tasks
-# print("A list of completed tasks:")
-# completed_tasks = []
-# for task in tasks:
-#     if task["completed"] == True:
-#         completed_tasks.append(task["description"])
-
-# for task in completed_tasks:
-#     print(f"{task}")
-# print()
+for task in uncompleted_tasks:
+    print(f"{task}")
+print()
 
 
-# # Print a list of all task descriptions
-# print("List of task descriptions: ")
-# for task in tasks:
-#     print(task["description"])
-# print()
+# Print a list of completed tasks
+print("A list of completed tasks:")
+completed_tasks = []
+for task in tasks:
+    if task["completed"] == True:
+        completed_tasks.append(task["description"])
+
+for task in completed_tasks:
+    print(f"{task}")
+print()
 
 
-# # Print a list of tasks where time_taken is at least a given time
-# print("Tasks that took longer than 15 minutes: ")
-# longer_tasks = []
-# for task in tasks:
-#     if task["time_taken"] >= 15:
-#         longer_tasks.append(task["description"])
+# Print a list of all task descriptions
+print("List of task descriptions: ")
+for task in tasks:
+    print(task["description"])
+print()
 
-# for task in longer_tasks:
-#     print(f"{task}")
-# print()
+
+# Print a list of tasks where time_taken is at least a given time
+print("Tasks that took longer than 15 minutes: ")
+longer_tasks = []
+for task in tasks:
+    if task["time_taken"] >= 15:
+        longer_tasks.append(task["description"])
+
+for task in longer_tasks:
+    print(f"{task}")
+print()
 
 
 # Print any task with a given description
-# task_to_search = input("Search for a task: ")
-# found_task = None
-# for task in tasks:
-#     if task["description"].lower() == task_to_search.lower():
-#         found_task = task
-# if found_task != None:
-#     print(found_task)
-# else:
-#     print("Task not found")
-# print()
+task_to_search = input("Search for a task: ")
+found_task = None
+for task in tasks:
+    if task["description"].lower() == task_to_search.lower():
+        found_task = task
+if found_task != None:
+    print(found_task)
+else:
+    print("Task not found")
+print()
 
 
 
-# # Extension
-# # Given a description, update that task to mark it as complete.
-# description_to_search_for = input("Search for a task, to update as completed: ")
-# found_description = False
-# for task in tasks:
-#     if task["description"].lower() == description_to_search_for.lower():
-#         found_description = True
-#         if task["completed"] == False:
-#             task["completed"] = True
-#             print("The following task has now been completed:")
-#             print(task)
-#         elif task["completed"] != False:
-#             print("That task is already completed.")
-#         # elif task["description"].lower() != description_to_search_for.lower():
-#         #     print("Task does not exist")
+# Extension
+# Given a description, update that task to mark it as complete.
+description_to_search_for = input("Search for a task, to update as completed: ")
+found_description = False
+for task in tasks:
+    if task["description"].lower() == description_to_search_for.lower():
+        found_description = True
+        if task["completed"] == False:
+            task["completed"] = True
+            print("The following task has now been completed:")
+            print(task)
+        elif task["completed"] != False:
+            print("That task is already completed.")
+        # elif task["description"].lower() != description_to_search_for.lower():
+        #     print("Task does not exist")
 
-# print()
+print()
 
 
 # #  Add a task to the list
