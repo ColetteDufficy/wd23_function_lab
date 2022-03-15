@@ -15,7 +15,7 @@ uncompleted_tasks = []
 for task in tasks:
     if task["completed"] == False:
         uncompleted_tasks.append(task["description"])
-print(f"List of uncompleted tasks: {uncompleted_tasks}") 
+print(f"List of uncompleted tasks: \n{uncompleted_tasks}") 
 print()
 
      
@@ -24,7 +24,7 @@ completed_tasks = []
 for task in tasks:
     if task["completed"] == True:
         completed_tasks.append(task["description"])
-print(f"List of completed tasks: {completed_tasks}") 
+print(f"List of completed tasks: \n{completed_tasks}") 
 print()
 
 
@@ -46,7 +46,7 @@ print()
 
 
 # Print any task with a given description
-task_to_search_for = input("Searching for a task: ")
+task_to_search_for = input("Search for a task: ")
 found_task = False
 for task in tasks:
     if task["description"].lower() == task_to_search_for.lower():
@@ -55,5 +55,36 @@ if found_task == True:
     print(task)
 else:
     print("Task not found")
+print()
+
+
+# Extension
+# Given a description, update that task to mark it as complete.
+description_to_search_for = input("Search for a task, to update as completed: ")
+found_description = False
+for task in tasks:
+    if task["description"].lower() == description_to_search_for.lower():
+        found_description = True
+        if task["completed"] == False:
+            task["completed"] = True
+            print("The following task has now been completed:")
+            print(task)
+else:
+    print("Task not found")
+print()
+
+
+#  Add a task to the list
+print("Adding a new task to the list.")
+new_task_name = input("Enter a task name: ")
+# tasks["completed"] == False
+new_task_time = input("How many minutes will this take? ")
+new_task = {"description": new_task_name, "completed": False, "time_taken": new_task_time}
+tasks.append(new_task)
+print()
+print("An updated list of tasks: ") 
+for task in tasks:
+    print(tasks)
+    print()
 
 
